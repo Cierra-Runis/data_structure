@@ -80,14 +80,18 @@ public:
 class LinkedList
 {
 private:
-    LinkedListItem linkedListItem;
     LinkedList *next;
+    LinkedListItem *linkedListItem;
 
 public:
     LinkedList();
     LinkedList(LinkedListItem *linkedListItem);
     void addLinkedListItem(LinkedListItem *linkedListItem);
     void insertLinkedListItemByIndex(LinkedListItem *linkedListItem, int index);
+    void addLinkedListItemsInHead(int n);
+    void addLinkedListItemsInEnd(int n);
+    void replaceLinkedListItemByIndex(LinkedListItem *linkedListItem, int index);
+    int searchLinkedListItemGetIndex(LinkedListItem *linkedListItem);
     void deleteLinkedListItemByIndex(int index);
     int getLength();
     string getLinkedListJson();
